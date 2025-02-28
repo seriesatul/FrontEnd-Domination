@@ -8,17 +8,9 @@ This repository contains **daily web development projects**, covering:
 - **CSS Animations & Responsive layouts**  
 - **JavaScript functionality & interactivity**  
 - **Full-stack projects** (React, Node.js, Express, MongoDB, etc.)  
-- **APIs, web integrations, and more!**  
-
-## 📅 Project List  
-| Day | Project Name | Description | Live Demo |  
-|----|--------------|-------------|------------|  
-| 1  | Project Name 1 | Short description | [Live Link](#) |  
-| 2  | Project Name 2 | Short description | [Live Link](#) |  
-| 3  | CSS Animations & Responsiveness | Practicing animations & layouts | [Live Link](#) |  
-| ...  | ...  | ... | ... |  
+- **APIs, web integrations, and more!**   
 
 ## 💡 How to Use  
 1. Clone this repo:  
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/seriesatul/FrontEnd-Domination.git
