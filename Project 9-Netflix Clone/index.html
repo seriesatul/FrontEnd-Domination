@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKgAswMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAgQFBgMBB//EADYQAQACAQEDCQUHBQEAAAAAAAABAgMEBRFyEhMhMzRBcbHBIjEyUaEUFUJTkdHwUmFigeEG/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAQFAQIGAwf/xAAvEQEAAQIEBAIJBQAAAAAAAAAAAQIDBAURMRIhMlFxoRMiNEFhgbHR8AYUFZHB/9oADAMBAAIRAxEAPwD8bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABLHHKyVrPum0QMxGs6IjoI2FppiJjLm3T/eP2ffuHT/m5v1j9kf8Ac21z/AY7tH9ueE8tLYsl8d/ipaYl76HTV1N71va1YrG/oe81REaqq3ZruXItUxzVRrfdWL8zJ9FfXaKmmxVvS9pmbbund8mkXaZnSEu7lmJtUTXVHKPiogPRXgAAAAAAAAAAAAACeHrsfHHmgnh67Hxx5sTs3t9cOt0t+VSaz76z9HspYL8jPHyt0LqoqjSX06xVxUeDndv4Ob1cZYjoyx9Y/kPPY3XZeGPNr7awc9oLzEe1j9uPX6MjY3XZeGPNNor4rHg5TE4b0Gb0zG1XPynXzayhtjs1OP0lfUNsdmpx+kvO11wsMx9lr8GQAnuJAAAAAAAAAAAAAAE8PXY+OPNBPD12PjjzYnZvb64dDffyd8e+OmGhjvF6VvHfG9Rl7aC3s2x99Z3x4Sq6o5Po1irhuad1mYiYmJjfE9Euf0GGdPr9Rhn8HRHhv6HQs7W4uRq654/HXkz4x/Pozaq01p7vLMcPx1W70b0z5Ty+uj6obY7NTj9JX1DbHZqcfpL1tdcIOY+yV+DIAT3EgAAAAAAAAAAAAACeHrsfHHmgnh67Hxx5sTs3t9cOjfMV+b1NJ7rezL6880b6T4K2Ozv6pmn1o9zUeOqpzmC0d8dMPmizxqdLizd9q9Pj3vd5c6ZWMTTet6xtVH1ZuOd9YUtsdmpx+kr015vLendE748FHbHZqcfpKTa64UOYaxhK4lkAJ7igAAAAAAAAAAAAABPD12PjjzQTw9dj4482J2b2+uHRo3+C275JPlvhnwVrv6tpVv8AzmffTJp5n3e3X19G05HZ2f7Nq8WSZ3V37reEuubYqjSvXuj/AKfxPpcJwTvTy+Xu+3yVNZXdamSOGfRl7Y7NTj9JbmanOYrV75jo8WHted+lpP8AnHlJYnWqGc4p4bFye8MgBYuEAAAAAAAAAAAAAAE8PXY+OPNBKluTetvlMSxOzaidKomXSPlvhnwZttrf04f1t/x522plmJiMdI/3KFFmvs66vNsJG1XlKhHudXsvP9o0OK8zvtEcm3jDlFzQ7Ry6Kt6461tW0791u6Ui/bm5Ty3UuTY6nB35m50zHP8Az8+LqmHt6nIxxHdOTfH6SjXb2T8WnpPhaYV9pbRrrsVK8zNLVtv38rf3I9qzcpriZhd5jmuDxGFqoor9bwn7M8BOccAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//2Q==" alt=""></div>
+        <input type="text" id="search-input" placeholder="Search for movies...">
+    </nav>
+    
+    <section class="hero" id="hero-section">
+        <h1 id="hero-title"></h1>
+        <p id="hero-overview"></p>
+        <button>PLAY</button>
+    </section>
+    
+    <section class="trending">
+        <h2>Trending Movies</h2>
+        <div class="trending-container" id="trending-container"></div>
+    </section>
+
+    <section class="genre-section">
+        <h2>Action Movies</h2>
+        <div class="movie-container" id="action-container"></div>
+    </section>
+
+    <section class="genre-section">
+        <h2>Comedy Movies</h2>
+        <div class="movie-container" id="comedy-container"></div>
+    </section>
+
+    <section class="genre-section">
+        <h2>Drama Movies</h2>
+        <div class="movie-container" id="drama-container"></div>
+    </section>
+
+    <section class="genre-section">
+        <h2>Horror Movies</h2>
+        <div class="movie-container" id="horror-container"></div>
+    </section>
+
+    <section class="genre-section">
+        <h2>Romance Movies</h2>
+        <div class="movie-container" id="romance-container"></div>
+    </section>
+
+    <div class="modal" id="movie-modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-poster" src="" alt="">
+            <p id="modal-overview"></p>
+            <div class="modal-details">
+                <p id="modal-rating"></p>
+                <p id="modal-release-date"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+        <div class="details"><input type="text" placeholder="Email Address">
+            <button>Get Started</button>
+        </div>
+        <div class="footer-links">
+            <h4>Questions? Call 1-844-505-2993</h4>
+            <div class="footer-column">
+              
+                <a href="#">FAQ</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Netflix Originals</a>
+            </div>
+            <div class="footer-column">
+                <a href="#">Help Center</a>
+                <a href="#">Jobs</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-column">
+                <a href="#">Account</a>
+                <a href="#">Redeem Gift Cards</a>
+                <a href="#">Privacy</a>
+                <a href="#">Speed Test</a>
+            </div>
+            <div class="footer-column">
+                <a href="#">Media Center</a>
+                <a href="#">Buy Gift Cards</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Legal Notices</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <select class="language-select">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+            <p class="copyright">Netflix India</p>
+        </div>
+
+    </div>
+
+    <style>
+        .search-results {
+            padding: 30px 20px;
+            display: none;
+        }
+        
+        .search-results h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        #search-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 10px 0;
+        }
+        
+        #search-container img {
+            width: 200px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        #search-container img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+    <div class="search-results" id="search-results">
+        <h2>Search Results</h2>
+        <div class="movie-container" id="search-container"></div>
+    </div>
+
+    <script>
+        const searchResults = document.getElementById('search-results');
+        const searchContainer = document.getElementById('search-container');
+
+        searchInput.addEventListener('input', async (event) => {
+            const query = event.target.value;
+            if (query) {
+                const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`);
+                const data = await response.json();
+                displaySearchResults(data.results);
+                searchResults.style.display = 'block';
+            } else {
+                searchResults.style.display = 'none';
+                fetchTrendingMovies();
+            }
+        });
+
+        function displaySearchResults(movies) {
+            searchContainer.innerHTML = '';
+            movies.forEach(movie => {
+                if (movie.poster_path) {
+                    const img = document.createElement('img');
+                    img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+                    img.alt = movie.title;
+                    img.onclick = () => openModal(movie);
+                    searchContainer.appendChild(img);
+                }
+            });
+        }
+    </script>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+body{
+    background-color: black;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 90vh;
+    width: 40%;
+    background-color: white;
+}
+
+.weather_header{
+    height: 1%;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    display:flex;
+    align-items: center;
+}
+
+.weather_header input{
+    margin: 10px;
+    background: #000;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.weather_body{
+    margin: 10px;
+    text-align: center;
+    place-content: center;
+    align-content: center;
+    height: 60%;
+    width: 100%;
+}
+
+.weather_city{
+    margin: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.weather-info{
+    height: 40%;
+    width: 100%;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.weather-card{
+    margin: 10px;
+    padding: 5px 10px;
+    gap: 10px;
+    border-radius: 10px;
+    height: fit-content;
+    background-color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
