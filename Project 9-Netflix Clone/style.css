@@ -295,3 +295,31 @@ nav input {
     color: #757575;
     font-size: 14px;
 }
+
+.search-results {
+    padding: 30px 20px;
+    display: none;
+}
+
+.search-results h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#search-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+#search-container img {
+    width: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+#search-container img:hover {
+    transform: scale(1.05);
+}

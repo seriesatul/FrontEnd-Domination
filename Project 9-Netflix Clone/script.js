@@ -142,3 +142,32 @@ window.onclick = (event) => {
         modal.style.display = 'none';
     }
 }
+
+const searchResults = document.getElementById('search-results');
+const searchContainer = document.getElementById('search-container');
+
+searchInput.addEventListener('input', async (event) => {
+    const query = event.target.value;
+    if (query) {
+        const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`);
+        const data = await response.json();
+        displaySearchResults(data.results);
+        searchResults.style.display = 'block';
+    } else {
+        searchResults.style.display = 'none';
+        fetchTrendingMovies();
+    }
+});
+
+function displaySearchResults(movies) {
+    searchContainer.innerHTML = '';
+    movies.forEach(movie => {
+        if (movie.poster_path) {
+            const img = document.createElement('img');
+            img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+            img.alt = movie.title;
+            img.onclick = () => openModal(movie);
+            searchContainer.appendChild(img);
+        }
+    });
+}
